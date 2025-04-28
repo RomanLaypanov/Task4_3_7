@@ -21,7 +21,7 @@ public class Main {
             }
         }
 
-        System.out.printf("%.6f\n", sum);
+        System.out.printf("%.6f", sum);
         sc.close();
     }
 
