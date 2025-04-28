@@ -14,7 +14,7 @@ public class Main {
             String str = sc.next();
 
             try {
-                double number = parseToSixDecimalPlaces(str);
+                double number = Double.parseDouble(str);
 
                 sum += number;
             } catch (NumberFormatException ignored) {
@@ -23,15 +23,5 @@ public class Main {
 
         System.out.printf("%.6f", sum);
         sc.close();
-    }
-
-    private static double parseToSixDecimalPlaces(String str) throws NumberFormatException {
-        int dotIndex = str.indexOf('.');
-
-        if (dotIndex != -1 && str.length() > dotIndex + 7) {
-            return Double.parseDouble(str.substring(0, dotIndex + 7));
-        }
-
-        return Double.parseDouble(str);
     }
 }
