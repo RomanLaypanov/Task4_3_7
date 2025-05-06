@@ -4,24 +4,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
-        scanner.close();
 
         double sum = 0.0;
 
-        Scanner sc = new Scanner(s);
+        scanner = new Scanner(s);
 
-        while (sc.hasNext()) {
-            String str = sc.next();
+        while (scanner.hasNext()) {
+            String str = scanner.next();
 
-            try {
-                double number = Double.parseDouble(str);
-
-                sum += number;
-            } catch (NumberFormatException ignored) {
-            }
+            double number = Double.parseDouble(str);
+            sum += number;
         }
 
         System.out.printf("%.6f", sum);
-        sc.close();
+        scanner.close();
     }
 }
