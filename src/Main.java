@@ -7,13 +7,14 @@ public class Main {
 
         double sum = 0.0;
 
-        scanner = new Scanner(s);
+        String[] strs = s.split("\\s+");
 
-        while (scanner.hasNext()) {
-            String str = scanner.next();
-
-            double number = Double.parseDouble(str);
-            sum += number;
+        for (String str : strs) {
+            try {
+                double number = Double.parseDouble(str);
+                sum += number;
+            } catch (NumberFormatException ignored) {
+            }
         }
 
         System.out.printf("%.6f", sum);
