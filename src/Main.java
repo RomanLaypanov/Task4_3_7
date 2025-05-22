@@ -6,9 +6,9 @@ public class Main {
         double sum = 0.0;
 
 
-        for (int i = 0; i < 3; i++) {
+        while (scanner.hasNext()) {
             if (scanner.hasNextDouble()) {
-                sum +=  Double.parseDouble(scanner.next());
+                sum += Double.parseDouble(scanner.next());
             } else {
                 scanner.next();
             }
